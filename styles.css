@@ -1,0 +1,1569 @@
+body, html {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure no extra space around the viewport */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+
+
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.navbar {
+    background: linear-gradient(to right, #ffffff, #cacaca); /* Gradient from #056579 to a lighter color */
+    color: white; /* Optional: Change text color to white for better contrast */
+}
+
+.navbar-nav .nav-link {
+    color: #056579!important; /* Change the link color to white */
+    font-weight: bold;
+    font-size: large;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #eb5204!important; /* Change link color on hover for better visibility */
+}
+
+/* Mobile Navigation Bar Styles */
+.navbar-mobile {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #b0b0b0d7;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1001; /* Above overlay */
+    padding: 20px;
+}
+
+.navbar-mobile ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar-mobile li {
+    margin: 15px 0;
+}
+
+/* Mobile Navigation Link Hover Effect */
+.navbar-mobile a:hover {
+    color: #eb5204; /* Change the hover color */
+    /*text-decoration: underline; /* Optional: Add underline on hover */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+
+.navbar-mobile a {
+    text-decoration: none;
+    color: #ffffff; /* Use your primary color */
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;                /* Use flexbox for alignment */
+    justify-content: center;      /* Center the icons horizontally */
+    margin-top: 20px;            /* Optional: Add some space above */
+}
+
+.social-icons a {
+    margin: 0 10px;              /* Adjust margin for equal spacing on both sides */
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent */
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Below navbar */
+}
+
+/* Close button styles */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    
+}
+
+/* Slogan Text Styling */
+.navbar-slogan {
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    font-size: 1.5rem; /* Adjust size for desktop */
+    color: #056579;
+    text-align: center;
+    margin: 0;
+    font-weight:711;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .navbar-center {
+        position: absolute;
+        left: 53%;
+        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Make slogan text smaller for mobile */
+    .navbar-slogan {
+        font-size: 1.1rem; /* Adjust size for mobile */
+    }
+}
+
+/* Hide the slogan on larger screens if needed */
+@media (min-width: 769px) {
+    .navbar-center {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/* Color Scheme */
+.text-blue {
+    color: #056579; /* Blue */
+}
+
+.btn-orange {
+    background-color: #eb5204; /* Orange */
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: #056579; /* Blue on hover */
+    color: white;
+}
+
+.bg-ash {
+    background-color:#F1F3F5; /* Ash background of teacher testimonial section */
+}
+
+.bg-black {
+    background-color: #020609; /* Black background */
+}
+
+.text-ash {
+    color: #ffffff; /* Ash text */
+}
+
+
+
+
+
+
+
+
+
+
+/* scrolling Section */
+.scrolling-container {
+    background: #eb5204; /* Full-width background */
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+}
+
+.scrolling-text {
+    background: #eb5204;
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden; /* Ensure no overflow is visible */
+    position: relative;
+    white-space: nowrap; /* Prevents the text from breaking lines */
+    width: 100%; /* Ensure it takes the full width */
+    padding-right: 150%; /* Creates space for the text to scroll smoothly */
+}
+
+.scrolling-text .announce-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* Hero Section */
+#hero {
+    background: url('hero-image.png') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the full section */
+    min-height: 100vh; /* Full viewport height */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 70px; /* Adds space from the top */
+}
+
+/* Content in Hero */
+#hero h1, #hero p {
+    z-index: 1;
+    color: white;
+    margin-top: 0;
+}
+
+#hero .btn-lg {
+    bottom: 300;
+    
+    z-index: 1;
+}
+
+/* Transparent background for content */
+.hero-content {
+    background-color: rgba(5, 101, 121, 0.8); /* #056579 with 80% opacity */
+    padding: 1px;
+    border-radius: 10px; /* Rounded corners for the background */
+    display: inline-block; /* Makes the background fit the content */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #hero {
+        background-position: top center; /* Adjust image position for mobile */
+        background-size: cover; /* Ensure the image fills the screen */
+        min-height: 70vh; /* Full height for mobile view */
+    }
+
+    #hero h1 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+#hero p{
+    font-size: 1rem;
+}
+    #hero .btn-lg {
+        padding: 4px 5px; /* Adjust button size for mobile */
+    }
+
+    .hero-content {
+        padding: 7px; /* Adjust padding for mobile */
+        padding-bottom: 17px;
+    }
+}
+
+/* For very small mobile devices, like portrait phones */
+@media (max-width: 480px) {
+    #hero {
+        background-position: center top; /* Adjust the focus for extra small screens */
+        background-size: cover; /* Still cover but adjusted */
+    }
+
+    #hero h1 {
+        font-size: 1.5rem; /* Smaller font for very small screens */
+    }
+
+    .hero-content {
+        padding: 10px; /* Further reduce padding for smaller devices */
+    }
+}
+
+
+
+#about{
+    border: 7px solid #eb5204;
+    padding-top: 10px;  /* Adjust top padding */
+    padding-bottom: 20px; /* Adjust bottom padding */
+    
+}
+
+
+
+
+
+
+
+
+/* Floating WhatsApp Icon */
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Call Options (Initially Hidden) */
+.call-options {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.call-button {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.call-button i {
+    margin-right: 10px;
+}
+
+/* WhatsApp Call Button */
+.whatsapp-call {
+    background-color: #25d366;
+}
+
+.whatsapp-call:hover {
+    background-color: #1ebe56;
+}
+
+/* Direct Call Button */
+.direct-call {
+    background-color: #056579;
+}
+
+.direct-call:hover {
+    background-color: #045265;
+}
+
+/* Show Call Options when clicked */
+.show-options {
+    display: block;
+}
+
+
+
+
+
+
+
+/* About us */
+/* Section Title */
+.section-title {
+    color: #056579; /* Your primary color */
+    font-size: 2.5rem; /* Increase font size for title */
+    font-weight: bold;
+}
+
+/* Service Box */
+.service-box {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Service List Styles */
+.service-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+}
+
+/* Service List Items */
+.service-list li {
+    margin-bottom: 15px; /* Space between list items */
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    line-height: 1.5; /* Increase line height for better spacing */
+    padding: 10px; /* Inner padding for list items */
+    border-bottom: 1px solid #ddd; /* Add bottom border for table-like effect */
+}
+
+/* Remove bottom border from last item */
+.service-list li:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-list li {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for the Clarity Session and Scholarship Guidance boxes */
+.rounded-box {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .rounded-box .card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #056579;
+    border-color: #056579;
+  }
+  
+  .btn-primary:hover {
+    background-color: #eb5204;
+    border-color: #eb5204;
+  }
+
+  
+/* Hero Section Styling */
+.hero-section {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+  }
+  
+  /* Section Styling */
+  section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #056579;
+    margin-bottom: 40px;
+  }
+  
+  section p.lea {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Image styling for responsiveness */
+  .clarity-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Media query to handle mobile view adjustments */
+  @media (max-width: 768px) {
+    .clarity-image {
+      width: 80%; /* Reduce the image size on mobile */
+      margin-bottom: 20px; /* Adds space between image and text */
+    }
+  }
+  
+
+
+
+
+
+
+
+  #scholarship-hero img {
+    border-radius: 15px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: box-shadow 0.3s ease; /* Optional: Smooth hover effect */
+}
+
+#scholarship-hero img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+
+
+
+
+
+
+  /* Frequently Question Section Title */
+/* Section Title */
+.section-title {
+    color: #056579;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+ /* .faq-toggle {
+    text-align: left; /* Aligns text to the left by default */
+ */
+
+  /* FAQ Container */
+  .faq-container {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  /* FAQ Question Styles */
+  .faq-question {
+    background-color: #f9f9f9;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* FAQ Icons */
+  .faq-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #eb5204;
+  }
+  
+  /* FAQ Answer */
+  .collapse {
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+  
+  .faq-toggle i {
+    transition: transform 0.3s ease;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+/* Our Programs Section Styling */
+#our-programs {
+    background-color: #f1f3f5;
+    padding: 20px 0; /* Adjust padding for mobile view */
+    margin-top: 0; /* Remove any top margin */
+    height: auto; /* Set height to auto to allow content to dictate height */
+}
+
+.program-image-wrapper {
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 0; /* Ensure no margin at the top */
+    border-radius: 0; /* Set border-radius to 0 for the image as well */
+}
+
+.program-image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    
+}
+
+.program-image-wrapper img:hover {
+    transform: scale(1.05);
+}
+
+.programs-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.program-btn {
+    background-color: transparent;
+    border: 3px solid #eb5204;
+    border-radius: 50px;
+    color: #eb5204;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    white-space: nowrap; /* Ensure text stays in one line */
+}
+
+.program-btn:hover {
+    background-color: #eb5204;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.program-description {
+    display: none;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 10px 0 0;
+    text-align: center;
+    background-color: #056579;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    justify-content: center;
+    margin: 10px auto; /* Center buttons */
+}
+
+.program-description.active {
+    display: block;
+}
+/* Programs Title Styling */
+.programs-title {
+    font-size: 1.2rem; /* Larger font size for emphasis */
+    font-weight: bold; /* Make it bold */
+    color: black; /* Keep the font color black */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add margin for spacing */
+    padding: 10px; /* Add some padding for better touch target */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+    text-transform: uppercase; /* Make text uppercase for emphasis */
+    border-bottom: 2px solid #eb5204; /* Add a bottom border with your theme color */
+}
+/* Adjust button layout for desktop */
+@media (min-width: 768px) {
+    .col-md-6 {
+        max-width: 48%; /* Reduce button column width to make better use of space */
+        flex: 0 0 48%;
+    }
+
+    .col-md-7 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Reduce button width and center them on mobile */
+@media (max-width: 768px) {
+    #our-programs {
+        padding: 20px 0; /* Adjust padding for mobile view */
+        margin-top: 0; /* Remove any top margin */
+        height: auto; /* Set height to auto to allow content to dictate height */
+    }
+    .programs-content {
+        justify-content: center; /* Center buttons horizontally on mobile */
+    }
+    .program-image-wrapper {
+        margin-top: -60px; /* Move the image up by 20px (adjust value as needed) */
+    }
+    
+    .program-btn {
+        width: 80%; /* Reduce button width for mobile view */
+        margin: 10px auto; /* Center buttons */
+        display: block; /* Ensure block display for buttons */
+    }
+}
+
+
+
+
+  
+  
+  
+
+/* Countries section */
+#countries-we-serve {
+    background-color: #ffffff;
+}
+
+.country-item img {
+    width: 80px; /* Set flag width */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.country-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #a6b0b9; /* Color for country names */
+}
+
+/* Hover effect for country items */
+.country-item:hover img {
+    transform: scale(1.1);
+}
+
+.country-item:hover p {
+    color: #056579; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .country-item {
+        flex: 0 0 20%; /* Show 5 countries per row on desktop */
+    }
+}
+
+@media (max-width: 767px) {
+    .country-item {
+        flex: 0 0 50%; /* Show 2 countries per row on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+/*All Section Title Styling */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #056579;
+    margin-bottom: 10px;
+    padding-top: 22px;
+}
+
+/* Horizontal line under the headline */
+.section-hr {
+    width: 60px;
+    height: 4px;
+    background-color: #eb5204;
+    border: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.headline-underline{
+    width: 60px;
+    height: 4px;
+    background-color: #eb5204;
+}
+
+
+
+
+
+
+
+
+
+
+/* Stay Inspired Section */
+/* Stay Inspired Section */
+#stay-inspired .img-fluid {
+    width: 100%; /* Ensures the image takes the full width of the column */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Adds a slight rounding to corners */
+}
+.ins{
+    font-family: 'Dancing Script', cursive; /* Apply scripted font */
+    font-size: 4rem !important; /* Increase font size */
+    color: #056579; /* Use your specified color */
+    font-weight: bold; /* Make it bold */
+   
+}
+
+@media (min-width: 768px) {
+    #stay-inspired .img-fluid {
+        max-width: 90%; /* Adjusts image size for larger screens */
+        margin: auto; /* Centers the image in the column */
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/* Invest Section */
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #056579;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Invest Section */
+  #invest-education {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    border-radius: 10px;
+  }
+  
+  /* Image Styling */
+  #invest-education img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Table Styling */
+  .invest-table {
+    width: 100%;
+    border-spacing: 0; /* Remove space between rows */
+    border: 2px solid #056579; /* Add border around entire table */
+  }
+  
+  /* Add borders to all table cells */
+  .invest-table td {
+    border: 2px solid #056579; /* Darker border for visibility */
+    padding: 10px; /* Reduced padding */
+  }
+  
+  /* Headings for each reason */
+  .invest-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #eb5204;
+    display: flex;
+    align-items: center;
+  }
+  
+  .invest-heading i {
+    color: #056579;
+    margin-right: 10px;
+    font-size: 1.6rem; /* Slightly smaller icon size */
+  }
+  
+  /* Text styling for each reason */
+  .invest-text {
+    font-size: 0.9rem; /* Reduced font size */
+    color: #333;
+    line-height: 1.4; /* Reduced line height */
+    margin-top: 5px;
+  }
+  
+  .invest-heading {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0; /* Remove default margin */
+  }
+
+  .invest-heading i {
+    margin-right: 10px; /* Add space between icon and heading */
+  }
+  /* Adjust for mobile view */
+  @media (max-width: 768px) {
+    .invest-table {
+        margin: 0 auto; /* Center the table */
+      width: 93%;
+      
+    }
+      .invest-table td {
+    text-align: center; /* Center text inside table cells */
+  }
+  
+  
+    .invest-heading {
+      font-size: 1.2rem;
+    }
+  
+    .invest-text {
+      font-size: 0.85rem;
+    }
+  
+    #invest-education img {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+/* Importance Section Styling */
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #056579;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center the title */
+  }
+  
+  /* Importance Section Styling */
+  #importance-study-abroad {
+    background-color: #f8f9fa; /* Light background for the section */
+    padding: 50px 0;
+    border-radius: 10px; /* Soft edges for the section */
+    text-align: center; /* Center everything in the section */
+  }
+  
+  /* Headings for each importance point */
+  .importance-heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #eb5204;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Align icon and text */
+    justify-content: center; /* Center the icon and text */
+  }
+  
+  .importance-heading i {
+    color: #056579;
+    margin-right: 10px;
+    font-size: 1.8rem; /* Increase icon size for emphasis */
+  }
+  
+  /* Text styling for importance points */
+  .importance-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 700px; /* Limit the width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Responsive Columns */
+  #importance-study-abroad .row {
+    margin-top: 20px;
+    justify-content: center; /* Center the columns */
+  }
+  
+  #importance-study-abroad .col-md-6 {
+    margin-bottom: 30px;
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 768px) {
+    .importance-heading {
+      font-size: 1.4rem;
+    }
+    
+    .importance-text {
+      font-size: 0.95rem;
+      padding: 0 15px; /* Add padding on the sides to avoid text hitting the edges */
+    }
+  }
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+/* Events Section Styling */
+#events-section {
+    background-color: #D5D5D5;
+    padding: auto;
+    margin: auto;
+}
+
+.event-image-wrapper {
+    text-align: center;
+}
+
+.event-image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+.event-details-wrapper {
+    padding-left: 20px;
+}
+
+.event-list {
+    list-style-type: disc;
+    color: #056579;
+    padding-left: 20px;
+}
+
+.event-list li {
+    font-size: 18px;
+    
+}
+
+.event-list li strong {
+    color: #eb5204;
+    font-weight: bold;
+}
+
+/* Ensure proper layout and alignment */
+@media (max-width: 768px) {
+    .event-details-wrapper {
+        padding-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .event-list {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .event-image-wrapper img {
+        max-width: 450px;
+    }
+}
+
+
+
+
+
+
+
+
+/* CSS for the our offices section */
+#our-offices h5 {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+#our-offices p {
+    margin-bottom: 0;
+}
+
+/* Ensure full-width image and add margin-bottom for spacing */
+.img-fluid {
+    width: 80%;
+    height: auto;
+    margin-bottom: 40px; /* Add space below the image */
+    display: block; /* Make it a block element to allow centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+
+}
+
+/* New red location pin icon */
+.fas.fa-map-pin {
+    color: #eb5204; /* Bright red for the icons */
+}
+
+/* Responsive columns for Our Offices (custom class to avoid conflicts) */
+.office-col {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .office-col {
+        flex: 0 0 50%; /* Two columns in mobile view */
+        max-width: 50%;
+    }
+    .img-fluid{
+        width: 100%;
+    }
+}
+
+/* Center align text and elements */
+.d-flex {
+    justify-content: center;
+    text-align: center;
+}
+
+.office-underline{
+    width: 300px;
+    height: 4px;
+    background-color: #056579 ;
+}
+
+
+
+
+
+
+/* Style for Teacher testimonial boxes */
+.testimonial-box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Style for the teacher testimonial images */
+.shadow-img {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover; /* Ensures the image fills the space without being distorted */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Students Testimonial Section Styling */
+#testimonial-section {
+    background-color: #f1f3f5;
+    padding: 60px 0;
+}
+
+.testimonial-box {
+    border: 4px solid #056579;
+    padding: 14px;
+    text-align: center;
+    height: 100%;
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.testimonial-image-wrapper {
+    margin-bottom: 15px;
+}
+
+.testimonial-image-wrapper img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #056579;
+    padding: 5px;
+}
+
+.testimonial-statement {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align:left;
+}
+
+.testimonial-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #056579;
+}
+
+.testimonial-country {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .testimonial-box {
+        margin-bottom: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Subscribe Section */
+#subscribe {
+    background-color: #ffffff; /* Light background color */
+    
+}
+
+.section-title {
+    color: #056579; /* Title color */
+}
+
+.btn-primary {
+    background-color: #eb5204; /* Button color */
+    border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+    background-color: #d94f03; /* Darker shade on hover */
+}
+
+
+
+
+
+
+
+
+
+
+/* Get in Touch Section Custom Styles */
+
+.text-orange {
+    color: #eb5204;
+}
+
+.btn-orange {
+    background-color: #eb5204;
+    color: white;
+    border: none;
+}
+
+.btn-outline-primary {
+    border-color: #056579;
+    color: #056579;
+}
+
+.btn-outline-primary:hover {
+    background-color: #056579;
+    color: white;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+form .form-control {
+    border-radius: 5px;
+}
+
+form button {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+
+
+
+
+/* Later Styling */
+/* Section Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #eb5204;
+}
+
+/* Card Styling */
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Icon Styling */
+.card i {
+    color: #056579;
+}
+
+/* Custom Button Styling */
+.btn-custom {
+    background-color: #056579;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #eb5204;
+}
+
+
+
+
+
+/* Community Engagement Section Styling */
+#community-engagement {
+    padding: 60px 0; /* Adjust padding for larger screens */
+}
+
+/* List Items Styling */
+#community-engagement ul li {
+    display: flex; /* Flexbox for aligning icon and text */
+    align-items: flex-start; /* Align icons to the start of the text */
+    font-size: 1.2rem; /* Slightly increase the font size */
+    text-align: left; /* Ensure text is aligned to the left */
+    margin-bottom: 20px; /* Add some space between each list item */
+}
+
+/* Icon Styling */
+#community-engagement ul li i {
+    margin-right: 15px; /* Increase space between icon and text */
+    font-size: 1.8rem; /* Increase icon size for desktop */
+    color: #fff; /* White color for icons */
+    flex-shrink: 0; /* Prevent icon from shrinking in small viewports */
+}
+
+/* Adjustments for mobile */
+@media (max-width: 768px) {
+    #community-engagement {
+        padding: 40px 0; /* Reduce padding for mobile */
+    }
+    
+    #community-engagement ul li {
+        font-size: 1rem; /* Smaller font size on mobile */
+        text-align: center; /* Center text on mobile */
+        margin-bottom: 15px; /* Adjust space between list items */
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: center; /* Center the icon and text */
+    }
+
+    #community-engagement ul li i {
+        font-size: 1.4rem; /* Adjust icon size on mobile */
+        margin-bottom: 8px; /* Add space below the icon */
+    }
+}
+
+
+
+
+
+
+/* Mission statement section - Mobile Optimizations */
+@media (max-width: 768px) {
+    #mission-statement h1 {
+        font-size: 1.8rem; /* Adjust headline size for mobile */
+        line-height: 1.1;
+    }
+
+    #mission-statement p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+    }
+
+    #mission-statement {
+        padding: 40px 20px; /* Add some padding adjustments for mobile view */
+    }
+}
+
+
+
+
+
+
+
+#interactive-tools {
+    background-color: #f1f3f5;
+}
+
+.tool-card {
+    border-radius: 15px; /* Rounded corners for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.tool-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.card-body {
+    text-align: center; /* Centered text */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Font size for titles */
+    font-weight: bold; /* Bold titles */
+}
+
+.card-text {
+    font-size: 1rem; /* Font size for descriptions */
+    color: #555; /* Darker color for readability */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Visa Text Styling */
+.visa-text, .learning-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Lists Styling */
+.visa-list, .learning-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.visa-list li, .learning-list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.visa-list li::before, .learning-list li::before {
+    content: "\f00c"; /* FontAwesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #eb5204;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery Section Styling */
+#unique-gallery {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 2rem 1rem; /* Vertical padding and horizontal padding */
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.3s; /* Smooth transform effect */
+}
+
+/* Hover Effect on Gallery Items */
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Adjustments for Mobile */
+@media (max-width: 768px) {
+    .gallery-item {
+        margin-bottom: 5px; /* Reduced space between items on mobile */
+    }
+}
+
+/* Prevents margin collapse and controls spacing */
+.row {
+    margin-left: -5px; /* Prevents extra space on left */
+    margin-right: -5px; /* Prevents extra space on right */
+}
+
+.col-6 {
+    padding-left: 5px; /* Space between columns */
+    padding-right: 5px; /* Space between columns */
+}
+
+
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px; /* Rounded corners */
+    background: linear-gradient(135deg, #056579, #eb5204);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+    margin-top: 20px; /* Space above the button */
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #eb5204, #056579); /* Reverse gradient on hover */
+    color: white;
+}
+
+
+#romanian-scholarship {
+    background-color: #f8f9fa; /* Light background for the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+}
+
